@@ -2,20 +2,62 @@
 <html>
 <head>
     <title>Charlie's Page</title>
-    <meta charset=""utf-8">
+    <meta charset="utf-8">
+    <style>
+        #grid{
+            grid-template-columns: 205px 1fr;
+            display: grid;
+        }
+        a {
+            color:black;
+        }
+        h1 {
+            font-size: 200%;
+            text-align:center;
+            border-bottom: 2px solid grey;
+            padding-bottom: 30px;
+            padding-top: 20px;
+            margin: 0px;
+        }
+        ul {
+            margin: 0px;
+        }
+        .todoList{
+            border-right: 2px solid grey;
+            width: 205px;
+            padding: 20px;
+            padding: 0px;
+        }
+        @media(max-width:830px){
+            #grid{
+                display: block;
+            }
+            .todoList{
+                border-right: none;
+            }
+            h1{
+                border-bottom: none;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>To do-list</h1>
-    <ul>
-        <li><input type="checkbox"><a href="good_morning.html">일어나기</a></li>
-        <li><input type="checkbox">점심 맛있게 먹기</li>
-        <li><input type="checkbox">학교 가기</li>
-        <li><input type="checkbox">수업 듣기</li>
-    </ul>
-    <p>동영상을 삽입해 봅시다.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/xSqXgFILz_8?si=WDHRiKw6A1Xrchif" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
-    
+    <h1>찰리의 페이지</h1>
+    <div id="grid">
+        <div class="todoList">
+            <h2 style="margin:0px; padding: 20px;">To do-list</h2>
+                <ul>
+                    <li><input type="checkbox"><a href="good_morning.html">일어나기</a></li>
+                    <li><input type="checkbox">점심 맛있게 먹기</li>
+                    <li><input type="checkbox">학교 가기</li>
+                    <li><input type="checkbox">수업 듣기</li>
+                </ul>
+        </div>
+        <div style="padding-left: 20px;">
+            <h2>재미있는 영상</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xSqXgFILz_8?si=WDHRiKw6A1Xrchif" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
     
 </body>
 </html>
